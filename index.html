@@ -141,16 +141,22 @@
         }
 
         @media print {
-            * {
-                -webkit-print-color-adjust: exact;
-                color-adjust: exact;
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .overlay {
+                display: none !important;
             }
             .slide {
                 display: block !important;
                 page-break-after: always;
             }
             .controls {
-                display: none;
+                display: none !important;
+            }
+            #focus-message {
+                display: none !important;
             }
         }
     </style>

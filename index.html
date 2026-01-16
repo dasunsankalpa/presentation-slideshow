@@ -372,7 +372,7 @@
         showSlide(0);
 
         // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
+        window.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
             if (e.key === 'ArrowLeft') changeSlide(-1);
         });

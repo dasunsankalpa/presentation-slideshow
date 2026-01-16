@@ -373,8 +373,12 @@
 
         // Keyboard navigation
         window.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight' || e.key === ' ') changeSlide(1);
+            if (e.key === 'ArrowRight') changeSlide(1);
             if (e.key === 'ArrowLeft') changeSlide(-1);
+            if (e.key === ' ') {
+                e.preventDefault();
+                changeSlide(1);
+            }
         });
     </script>
 </body>

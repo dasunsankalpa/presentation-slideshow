@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paperless Education & E-Learning</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url('background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        /* Dark overlay to ensure text is readable against the background image */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Darkens the background image more */
+            z-index: -1;
+        }
+
+        .slide-container {
+            background-color: transparent; /* Transparent box for text */
+            width: 80%;
+            max-width: 900px;
+            height: 70vh;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            padding: 40px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .slide {
+            display: none; /* Hidden by default */
+            width: 100%;
+        }
+
+        .slide.active {
+            display: block; /* Only show the active slide */
+        }
+
+        h1 {
+            color: white; /* Changed to white for better visibility */
+            font-size: 3.6em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #2e7d32;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: white; /* Changed to white for better visibility */
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 2.16em;
+            line-height: 1.8;
+            color: white; /* Changed to white for better visibility */
+            text-align: center;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        li::before {
+            content: "🍃";
+            margin-right: 10px;
+            font-size: 0.8em;
+            filter: brightness(0) invert(1);
+        }
+
+        /* Navigation Buttons */
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.8em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #f0f0f0;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .slide-number {
+            position: absolute;
+            bottom: 25px;
+            right: 50%;
+            transform: translateX(50%);
+            font-size: 1.44em;
+            color: white; /* Changed to white for visibility */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="slide-container">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <h1>Paperless Education &<br>E-Learning</h1>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <h2>Introduction</h2>
+            <ul>
+                <li><strong>Paperless Education:</strong> Digital learning without paper</li>
+                <li><strong>E-Learning:</strong> Education via internet & digital tools</li>
+                <li><strong>Importance:</strong> Saves resources, increases access, modern learning</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <h2>Problems in Traditional Education</h2>
+            <ul>
+                <li>Heavy paper usage</li>
+                <li>High cost of books & printing</li>
+                <li>Limited access to resources</li>
+                <li>Time-consuming manual processes</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <h2>What is a Paperless Education System</h2>
+            <ul>
+                <li>Digital notes & e-textbooks</li>
+                <li>Online assignments & submissions</li>
+                <li>No physical paperwork</li>
+                <li>Cloud-based storage & sharing</li>
+            </ul>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <h2>What is an E-Learning System</h2>
+            <ul>
+                <li>Learning via internet platforms</li>
+                <li>Online classes, lectures & videos</li>
+                <li>Anytime, anywhere access</li>
+                <li>Self-paced learning flexibility</li>
+            </ul>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide">
+            <h2>Key Components</h2>
+            <ul>
+                <li>Learning Management System (LMS)</li>
+                <li>Internet & smart devices</li>
+                <li>Digital content (PDFs, videos, e-books)</li>
+                <li>Cloud storage solutions</li>
+            </ul>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide">
+            <h2>Tools & Technologies Used</h2>
+            <ul>
+                <li>Google Classroom / Moodle</li>
+                <li>Zoom / Microsoft Teams</li>
+                <li>PDFs, videos, e-books</li>
+                <li>Mobile learning apps</li>
+            </ul>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide">
+            <h2>Role of Students</h2>
+            <ul>
+                <li>Access digital materials easily</li>
+                <li>Submit assignments online</li>
+                <li>Attend virtual classes</li>
+                <li>Track progress digitally</li>
+            </ul>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide">
+            <h2>Role of Teachers</h2>
+            <ul>
+                <li>Upload notes, lectures & videos</li>
+                <li>Conduct online exams</li>
+                <li>Monitor student progress</li>
+                <li>Provide digital feedback</li>
+            </ul>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="slide">
+            <h2>Advantages for Students</h2>
+            <ul>
+                <li>Easy access to materials</li>
+                <li>Learn at own pace</li>
+                <li>Saves money & time</li>
+                <li>Interactive & engaging learning</li>
+            </ul>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="slide">
+            <h2>Advantages for Teachers & Institutions</h2>
+            <ul>
+                <li>Easy content management</li>
+                <li>Automated grading systems</li>
+                <li>Reduced paperwork</li>
+                <li>Better data tracking & analytics</li>
+            </ul>
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="slide">
+            <h2>Environmental Benefits</h2>
+            <ul>
+                <li>Saves trees</li>
+                <li>Reduces paper waste</li>
+                <li>Less pollution</li>
+                <li>Supports sustainability goals</li>
+            </ul>
+        </div>
+
+        <!-- Slide 12 -->
+        <div class="slide">
+            <h2>Challenges</h2>
+            <ul>
+                <li>Internet availability issues</li>
+                <li>High device cost</li>
+                <li>Technical problems</li>
+                <li>Lack of digital literacy</li>
+            </ul>
+        </div>
+
+        <!-- Slide 13 -->
+        <div class="slide">
+            <h2>Solutions to Challenges</h2>
+            <ul>
+                <li>Affordable devices & subsidies</li>
+                <li>Offline access options</li>
+                <li>Training programs for teachers/students</li>
+                <li>Government & institutional support</li>
+            </ul>
+        </div>
+
+        <!-- Slide 14 -->
+        <div class="slide">
+            <h2>Future of Paperless Education</h2>
+            <ul>
+                <li>AI-powered personalized learning</li>
+                <li>Fully virtual classrooms</li>
+                <li>Tailored education paths</li>
+                <li>Global access & collaboration</li>
+            </ul>
+        </div>
+
+        <!-- Slide 15 -->
+        <div class="slide">
+            <h1>Conclusion</h1>
+            <ul>
+                <li>Paperless education = future of learning</li>
+                <li>Improves efficiency & accessibility</li>
+                <li>Environment-friendly approach</li>
+                <li>Supports lifelong learning</li>
+            </ul>
+        </div>
+
+        <!-- Slide 16 -->
+        <div class="slide">
+            <h1>Thank You!</h1>
+           
+        </div>
+
+        <div class="controls">
+            <span class="slide-number" id="slideIndicator">1 / 17</span>
+            <button onclick="window.print()">📥 Download PDF</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicator = document.getElementById('slideIndicator');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+            indicator.textContent = `${index + 1} / ${slides.length}`;
+            
+            // Disable buttons if at start or end
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === slides.length - 1;
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+            showSlide(currentSlide);
+        }
+
+        // Initialize
+        showSlide(0);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') changeSlide(1);
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+        });
+    </script>
+</body>
+</html>
